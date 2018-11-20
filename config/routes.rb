@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'availabilities/index'
+  get 'availabilities/update'
   devise_for :users
   root to: 'pages#home'
   get '/baseworkweek', to: 'availabilities#index'
