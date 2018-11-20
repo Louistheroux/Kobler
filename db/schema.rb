@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_20_112936) do
+ActiveRecord::Schema.define(version: 2018_11_20_124527) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,10 +33,12 @@ ActiveRecord::Schema.define(version: 2018_11_20_112936) do
     t.bigint "drop_off_point_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "time_schedule_id"
     t.index ["drop_off_point_id"], name: "index_bookings_on_drop_off_point_id"
     t.index ["instructor_id"], name: "index_bookings_on_instructor_id"
     t.index ["pick_up_point_id"], name: "index_bookings_on_pick_up_point_id"
     t.index ["student_id"], name: "index_bookings_on_student_id"
+    t.index ["time_schedule_id"], name: "index_bookings_on_time_schedule_id"
   end
 
   create_table "instructors", force: :cascade do |t|
@@ -107,6 +109,7 @@ ActiveRecord::Schema.define(version: 2018_11_20_112936) do
   add_foreign_key "availabilities", "instructors"
   add_foreign_key "bookings", "instructors"
   add_foreign_key "bookings", "students"
+  add_foreign_key "bookings", "time_schedules"
   add_foreign_key "instructors", "schools"
   add_foreign_key "instructors", "users"
   add_foreign_key "schools", "locations"
