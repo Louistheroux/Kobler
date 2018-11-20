@@ -22,87 +22,114 @@ puts "Creating users..."
 greg = User.create!(
   full_name: 'Greg Stachowiak',
   email: 'gregista88@gmail.com',
-  password: '123123'
-)
+  password: '123123',
+  phone_number: '12312312',
+  address: 'Sundvænget 6, 2900 Hellerup'
+  )
 
 bjorn = User.create!(
   full_name: 'Bjørn Brok',
   email: 'bjorn@gmail.com',
-  password: '123123'
-)
+  password: '123123',
+  phone_number: '12312312',
+  address: 'Hellebækgade 42, 1. th'
+  )
 
 kasper = User.create!(
   full_name: 'Kasper Weidick',
   email: 'kasper@gmail.com',
-  password: '123123'
-)
+  password: '123123',
+  phone_number: '12312312',
+  address: 'Vævergade 7, 2200 København'
+  )
 
 louis = User.create!(
   full_name: 'Louis Theroux',
   email: 'louistheroux@live.com',
-  password: 'louis123'
-)
+  password: 'louis123',
+  phone_number: '12312312',
+  address: 'Refsnæsgade 46, 2200 København'
+  )
 
 makena = User.create!(
   full_name: 'Makena Hawley',
   email: 'makena@gmail.com',
-  password: '123123'
-)
+  password: '123123',
+  phone_number: '12312312',
+  address: 'Nørrebrogade 34, 2200 København'
+  )
 
 jerrel = User.create!(
   full_name: 'Jerrel Burney',
   email: 'jerrel@gmail.com',
-  password: '123123'
-)
+  password: '123123',
+  phone_number: '12312312',
+  address: 'Inge Lehmanns Vej 7, 2100 København'
+  )
 
 janina = User.create!(
   full_name: 'Janina Kokkonen',
   email: 'janina@gmail.com',
-  password: '123123'
-)
+  password: '123123',
+  phone_number: '12312312',
+  address: 'Slagelsesgade 12, 2100 København'
+  )
 
 irene = User.create!(
   full_name: 'Irene Smith',
   email: 'irene@gmail.com',
-  password: '123123'
-)
+  password: '123123',
+  phone_number: '12312312',
+  address: 'Willemoesgade 11, 2100 København'
+  )
 
 henry = User.create!(
   full_name: 'Henry Stenberg',
   email: 'henry@gmail.com',
-  password: '123123'
-)
+  password: '123123',
+  phone_number: '12312312',
+  address: 'Krausesvej 2, 2100 København'
+  )
 
 brian = User.create!(
   full_name: 'Brian Welch',
   email: 'brian@gmail.com',
-  password: '123123'
-)
+  password: '123123',
+  phone_number: '12312312',
+  address: 'Assensgade 5, 2100 København'
+  )
 
 beltran = User.create!(
   full_name: 'Beltran Nowack',
   email: 'beltran@gmail.com',
-  password: '123123'
-)
+  password: '123123',
+  phone_number: '12312312',
+  address: 'Helgesensgade 5, 2100 København'
+  )
 
 anna = User.create!(
   full_name: 'Anna Litfin',
   email: 'anna@gmail.com',
-  password: '123123'
-)
-
+  password: '123123',
+  phone_number: '12312312',
+  address: 'Fåborggade 2, 2100 København'
+  )
 
 
 schumacher = User.create!(
   full_name: 'Michael Schumacher',
   email: 'schumacher@hotmail.com',
-  password: '123123'
+  password: '123123',
+  phone_number: '12312312',
+  address: 'Norgesmindevej 6, 2900 Hellerup'
   )
 
 hamilton = User.create!(
   full_name: 'Lewis Hamilton',
   email: 'hamilton@gmail.com',
-  password: '123123'
+  password: '123123',
+  phone_number: '12312312',
+  address: 'Frederikkevej 19, 2900 Hellerup'
   )
 
 
@@ -148,9 +175,9 @@ puts "Creating schools..."
 
 school_1 = School.create!(
   name: "Kösem's køreskole",
-  phone_number: 12345678,
+  phone_number: '12345678',
   email: "louistheroux@live.com",
-  location_id: location_1
+  location: location_1
   )
 
 
