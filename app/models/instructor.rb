@@ -1,6 +1,7 @@
 class Instructor < ApplicationRecord
   belongs_to :user
   belongs_to :school
-  # do we need this???
-  validates :photo, presence: true
+  has_many :students
+
+  mount_uploader :photo, PhotoUploader
 end
