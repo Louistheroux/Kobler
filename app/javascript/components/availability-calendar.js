@@ -5,7 +5,14 @@ function availabilityCalendar(){
     var calendarEl = document.getElementById('availabilities-calendar'); // grab element reference
     var calendar = new Calendar(calendarEl, {
       defaultView: 'agendaWeek',
-      locale: "en-gb"
+      locale: "en-gb",
+      minTime: "08:00:00",
+      maxTime: "21:00:00",
+      height: "auto",
+      allDaySlot: false,
+      header: false,
+      columnHeaderFormat: "dddd",
+      slotLabelFormat: "H:mm"
     });
     calendar.render();
   });
