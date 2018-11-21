@@ -37,12 +37,15 @@
 
 /* Navbar link */
 .navbar-wagon-link {
-  color: #616668;
+  color: rgb(240, 240, 240);
   font-size: 14px;
+  border-bottom: 3px solid transparent;
+  transition: letter-spacing 280ms ease-in-out;
 }
 .navbar-wagon-link:hover {
-  color: #da552f;
+  color: white;
   text-decoration: none;
+  border-bottom: 3px solid white;
 }
 
 /* Dropdown menu */
