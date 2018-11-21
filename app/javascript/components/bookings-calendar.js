@@ -5,6 +5,9 @@ function bookingsCalendar(){
     var calendarEl = document.getElementById('bookings-calendar'); // grab element reference
     var calendar = new Calendar(calendarEl, {
       defaultView: 'agendaWeek',
+      minTime: "08:00:00",
+      maxTime: "21:00:00",
+      height: "auto",
       locale: "en-gb"
     });
     calendar.render();

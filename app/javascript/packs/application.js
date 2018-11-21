@@ -6,3 +6,7 @@ import { availabilityCalendar } from '../components/availability-calendar.js';
 availabilityCalendar()
 import { bookingsCalendar } from '../components/bookings-calendar.js';
 bookingsCalendar()
+
+// For the month calendar in the left corner of the bookings view
+import { monthlyCalendar } from '../components/monthly-calendar.js';
+monthlyCalendar()
