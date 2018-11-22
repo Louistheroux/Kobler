@@ -28,3 +28,13 @@
   grid-column: 2 / span 2;
 
 }
+
+// .fc-basic-view > .fc-body > .fc-row {
+//   height: 1.8em !important;
+// }
+
+// Using a selector hadrian showed us directly from chrome
+#monthly-calendar > div.fc-view-container > div > table > tbody > tr > td > div > div > div{
+  min-height: unset !important;
+  height: 1.8em !important;
+}
