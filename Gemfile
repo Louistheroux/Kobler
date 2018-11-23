@@ -10,6 +10,7 @@ gem 'rails', '5.2.1'
 gem 'redis'
 gem 'geocoder'
 
+gem 'rest-client', '~>2.0.2'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
 gem 'font-awesome-sass', '~> 5.0.9'
