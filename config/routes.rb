@@ -5,5 +5,10 @@ Rails.application.routes.draw do
   get '/design', to: 'pages#design'
   patch '/baseworkweek/:id', to: 'availabilities#update'
   get '/bookings', to: 'bookings#index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  namespace :api, defaults: { format: :json } do
+    namespace :v1 do
+      resources :availabilities, only: [ :index ]
+    end
+  end
 end
