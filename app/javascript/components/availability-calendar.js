@@ -20,8 +20,33 @@ function availabilityCalendar(){
       header: false,
       columnHeaderFormat: "dddd",
       slotLabelFormat: "H:mm",
+      selectable: true,
+      dayClick: function(selectionInfo) {
+        console.log(selectionInfo)
+        let start_time = selectionInfo.i
+        let end_time = selectionInfo._d
+        fetch(`${KOBLER_BASE_URL}baseworkweek`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify( {start_time, end_time} )
+        });
+      },
+      eventClick: function(info){
+         console.log("halløj");
+      },
       eventDrop: function(info) {
-        console.log()
+        let start_time = info.start._d
+        let end_time = info.end._d
+        let id = info.id
+        fetch(`${KOBLER_BASE_URL}/api/v1/availabilities/${id}`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify( {start_time, end_time} )
+        });
       }
     });
     calendar.render();

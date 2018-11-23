@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  acts_as_token_authenticatable
   has_one :instructor
   has_one :students
   # Include default devise modules. Others available are:

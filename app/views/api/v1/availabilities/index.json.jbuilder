@@ -1,3 +1,3 @@
 json.array! @availabilities do |availability|
-  json.extract! availability, :title, :start, :end
+  json.extract! availability, :id, :title, :start, :end
 end

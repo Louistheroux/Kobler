@@ -8,10 +8,9 @@ class Instructor < ApplicationRecord
 
   mount_uploader :photo, PhotoUploader
 
-  after_save :generate_availabilities
+  after_create :generate_availabilities
 
   def generate_availabilities
-    Availability.destroy_all
     now = Time.now
     start_time = now.beginning_of_week
     5.times do
