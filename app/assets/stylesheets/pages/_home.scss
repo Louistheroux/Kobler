@@ -1,1 +1,58 @@
-// Specific CSS for your home-page
+.content-header {
+  margin-top: 100px;
+  text-align: center;
+  overflow: hidden;
+  padding-bottom: 100px;
+
+  span {
+    position:relative;
+    display: inline-block;
+  }
+
+  span:before, span:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    border-bottom: 2px solid $granite;
+    width: 592px;
+    margin: 0 20px;
+  }
+
+  span:before{
+    right: 100%;
+  }
+
+  span:after{
+    left: 100%;
+  }
+}
+
+.review-avatar {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+
+// .decorated{
+//      overflow: hidden;
+//      text-align: center;
+//  }
+// .decorated > span{
+//     position: relative;
+//     display: inline-block;
+// }
+// .decorated > span:before, .decorated > span:after{
+//     content: '';
+//     position: absolute;
+//     top: 50%;
+//     border-bottom: 2px solid;
+//     width: 592px; /* half of limiter */
+//     margin: 0 20px;
+// }
+// .decorated > span:before{
+//     right: 100%;
+// }
+// .decorated > span:after{
+//     left: 100%;
+// }

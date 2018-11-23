@@ -48,6 +48,28 @@
   border-bottom: 3px solid white;
 }
 
+.navbar-wagon-trial-link {
+  color: rgb(240, 240, 240);
+  font-size: 14px;
+  border-bottom: 3px solid transparent;
+  transition: letter-spacing 280ms ease-in-out;
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+    border-bottom: 3px solid white;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 /* Dropdown menu */
 .navbar-wagon-dropdown-menu {
   margin-top: 15px;
