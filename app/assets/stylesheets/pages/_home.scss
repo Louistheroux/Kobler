@@ -1,8 +1,9 @@
+// Headers with lines on the sides
 .content-header {
-  margin-top: 100px;
+  margin-top: 80px;
   text-align: center;
   overflow: hidden;
-  padding-bottom: 100px;
+  padding-bottom: 40px;
 
   span {
     position:relative;
@@ -27,32 +28,30 @@
   }
 }
 
+
+// Review section
 .review-avatar {
   border-radius: 50%;
-  height: 100px;
-  width: 100px;
+  height: 120px;
+  width: 120px;
+  margin-right: 20px;
 }
 
+.review-grid {
+  display: grid;
+  padding: 0px 50px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 200px 200px;
+  grid-column-gap: 20px;
+}
 
-// .decorated{
-//      overflow: hidden;
-//      text-align: center;
-//  }
-// .decorated > span{
-//     position: relative;
-//     display: inline-block;
-// }
-// .decorated > span:before, .decorated > span:after{
-//     content: '';
-//     position: absolute;
-//     top: 50%;
-//     border-bottom: 2px solid;
-//     width: 592px; /* half of limiter */
-//     margin: 0 20px;
-// }
-// .decorated > span:before{
-//     right: 100%;
-// }
-// .decorated > span:after{
-//     left: 100%;
-// }
+.review-item {
+  display: flex;
+  word-wrap: break-word;
+  font-size: 16px;
+}
+
+.review-name {
+  font-style: italic;
+  font-size: 14px;
+}
