@@ -10,6 +10,8 @@ function bookingsCalendar(){
   document.addEventListener('DOMContentLoaded', function() { // page is now ready...
     var calendarEl = document.getElementById('bookings-calendar'); // grab element reference
     var calendar = new Calendar(calendarEl, {
+      allDaySlot: false,
+      eventTextColor: '#222222',
       defaultView: 'agendaWeek',
       minTime: "08:00:00",
       maxTime: "21:00:00",

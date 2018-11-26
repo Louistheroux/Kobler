@@ -9,7 +9,9 @@ function availabilityCalendar(){
       //   // change the border color just for fun
       //   info.el.style.borderColor = 'red';
       // },
+      eventColor: '#808281',
       eventStartEditable: true,
+      eventTextColor: "#222222",
       eventOverlap: false,
       defaultView: 'agendaWeek',
       locale: "en-gb",

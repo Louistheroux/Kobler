@@ -10,6 +10,7 @@ class Instructor < ApplicationRecord
   after_create :generate_availabilities
   after_create :generate_bookings
 
+  # GENERATING BASEWORKWEEK TEMPLATE
   def generate_availabilities
     now = Time.now
     start_time = now.beginning_of_week
@@ -28,6 +29,7 @@ class Instructor < ApplicationRecord
     end
   end
 
+  #GENERATE BOOKINGS FROM AVAILABILITIES
   def generate_bookings
     all_availabilities = self.availabilities
     all_availabilities.each do |booking|
@@ -39,11 +41,8 @@ class Instructor < ApplicationRecord
     end
   end
 
-  def hello
-    puts "Hello world"
-  end
-
-  def monkeypants
+  #GENERATING DUMMI BOOKINGS FOR DEMO PURPOSES
+  def generate_students_for_bookings
     random_bookings = self.bookings.shuffle
     random_bookings[0..bookings.size / 2].each do |booking|
       booking.student = Student.all.sample

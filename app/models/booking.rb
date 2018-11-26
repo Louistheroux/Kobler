@@ -27,4 +27,12 @@ class Booking < ApplicationRecord
   def end_point
     drop_off_point ? drop_off_point.address : "TBD"
   end
+
+  def color
+    if self.student
+     "#65D851"
+    else
+      "#808281"
+    end
+  end
 end
