@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
+  get '/dashboard', to: 'dashboard#index'
   get '/baseworkweek', to: 'availabilities#index'
   get '/design', to: 'pages#design'
   patch '/baseworkweek/:id', to: 'availabilities#update'
