@@ -11,7 +11,7 @@
 
       <!-- Links when logged in -->
 
-      <%= link_to "My workweek", "#", class: "btn-navbar" %>
+      <%= link_to "Knowledge", "#", class: "btn-navbar" %>
       <%= link_to "See bookings", "#", class: "btn-navbar" %>
       <%= link_to "Dashboard", "#", class: "btn-navbar" %>
 
@@ -40,13 +40,7 @@
       </div>
     <% else %>
       <!-- Login link (when logged out) -->
-
-      <!-- Empty links for homepage -->
-      <%= link_to "Features", root_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Pricing", root_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Demo", root_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Try it for free!", root_path, class: "navbar-wagon-item navbar-wagon-trial-link" %>
-
+      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
   </div>
 

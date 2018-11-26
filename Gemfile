@@ -10,6 +10,7 @@ gem 'rails', '5.2.1'
 gem 'redis'
 gem 'geocoder'
 
+gem 'rest-client', '~>2.0.2'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
 gem 'font-awesome-sass', '~> 5.0.9'
@@ -20,8 +21,7 @@ gem 'webpacker'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
-
-
+gem 'simple_token_authentication'
 
 
 group :development do
@@ -34,5 +34,4 @@ group :development, :test do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'dotenv-rails'
 end

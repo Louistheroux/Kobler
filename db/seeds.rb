@@ -190,7 +190,7 @@ instructor_1 = Instructor.create!(
   school: school_1
   )
 
-instructor_1.remote_photo_url = "https://images.thestar.com/JiQVes9W-Ndp8lnmq7-72S9NxdI=/1200x778/smart/filters:cb(1513459234935)/https://www.thestar.com/content/dam/thestar/sports/2014/06/16/michael_schumacher_out_of_a_coma_released_from_hospital/michael_schumacher.jpg"
+instructor_1.remote_photo_url = "https://www.thestar.com/content/dam/thestar/sports/2014/06/16/michael_schumacher_out_of_a_coma_released_from_hospital/michael_schumacher.jpg"
 instructor_1.save!
 
 

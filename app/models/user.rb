@@ -1,6 +1,7 @@
 class User < ApplicationRecord
-  has_many :instructors
-  has_many :students
+  acts_as_token_authenticatable
+  has_one :instructor
+  has_one :students
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,

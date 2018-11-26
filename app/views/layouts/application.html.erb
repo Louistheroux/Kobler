@@ -13,6 +13,9 @@
     <%= render 'shared/instructor_navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>
+    <script type="text/javascript">
+      const KOBLER_BASE_URL = '<%= root_url %>';
+    </script>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>
