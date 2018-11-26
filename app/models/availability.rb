@@ -12,7 +12,7 @@ class Availability < ApplicationRecord
   end
 
   def title
-    "Foobar"
+    "Available"
   end
 end
 
