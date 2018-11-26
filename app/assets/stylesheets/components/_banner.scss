@@ -1,7 +1,23 @@
 .banner-home {
-  height: 60vh !important;
+  height: 540px !important;
   background-size: cover !important;
   text-align: center;
+
+  h1 {
+    margin-top: 0px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  #last-header {
+    padding-bottom: 155px;
+  }
+
+  #first-header {
+    padding-top: 125px;
+  }
+
+}
   // opacity: 0.2;
   align-items: center;
   justify-content: center;
@@ -18,7 +34,4 @@
   padding-top: 250px;
   opacity: 1 !important;
 }
-
-
-
 

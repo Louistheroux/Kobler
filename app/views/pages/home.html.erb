@@ -1,8 +1,59 @@
 
-<div class="banner-home" style="background-image: url(<%= image_path "background.jpg" %>);">
-  <h1>Kobler</h1>
-  <div class="btn btn-primary btn-lg">Login as Student </div>
-  <div class="btn btn-primary btn-lg">Login as Instructor</div>
 
+<div class="banner-home" style="background-image: url(<%= image_path "background_with_opacity.png" %>);">
+
+  <h1 id="first-header">Header</h1>
+  <h1>Value proposition</h1>
+  <h1 id="last-header">Header</h1>
+
+
+    <%= link_to "Login as teacher", new_user_session_path, class:"button-banner" %>
+    <%= link_to "Login as student", new_user_session_path, class:"button-banner" %>
 </div>
 
+<div class="driving-schools">
+  <h2 class="content-header"><span> Driving schools the 21st century way</span></h2>
+</div>
+
+
+<!-- Review section -->
+<div class="instructor-reviews-container">
+  <h2 class="content-header"><span> What other schools think of us</span></h2>
+  <div class="review-grid">
+
+    <!-- Review 1 -->
+    <div class="review-item">
+      <%= image_tag("business_2.png", class:"review-avatar")  %>
+      <p>Virkelig godt system som er meget brugervenligt - det er jo nærmest selvkørende. God service! Man får hjælp straks. Alt er nemt, og det meste kan klares fra app'en, når jeg er på farten.<br><br>
+        <span class="review-name">- Rikke Siesby, indehaver af Østerbro Trafikskole</span></p>
+      </div>
+
+    <!-- Review 2 -->
+    <div class="review-item">
+      <%= image_tag("business_1.png", class:"review-avatar")  %>
+      <p>Fantastisk overskueligt kalendersystem som er let at arbejde med. Eleverne er glade for overskueligheden Kobler er fantastisk, og jeg vil klart anbefale det til andre.<br><br>
+        <span class="review-name">- Daniel Rask, indehaver af Sjællands Køreskole</span></p>
+      </div>
+
+    <!-- Review 3 -->
+      <div class="review-item">
+        <%= image_tag("business_3.png", class:"review-avatar")  %>
+        <p>Det har lette mine administrative arbejdsopgaver markant at samle tingene et sted. Siden vi har taget systemet i brug, er der ikke én elev der har glemt sin kørelektion grundet påmindelser.<br><br>
+          <span class="review-name">- Ilse Hansen, indehaver af Hornbæk Trafikskole</span></p>
+        </div>
+
+      <!-- Review 4 -->
+      <div class="review-item">
+        <%= image_tag("business_4.png", class:"review-avatar")  %>
+        <p>Det har lettet mit job som kørelærer enormt at have en dynamisk kalender, som stort set klarer alle mine kattepiner ved jobbet. Hver uge har jeg en fuldt booket kalender, og så næsten uden at løfte en finger.<br><br>
+          <span class="review-name">- Henrik Larsen, indehaver af Bornholm Trafikskole</span></p>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Map section -->
+    <div class="find-schools-map">
+      <h2 class="content-header"><span> Where can you find driving schools with kobler?</span></h2>
+    </div>

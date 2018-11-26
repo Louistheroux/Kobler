@@ -40,7 +40,13 @@
       </div>
     <% else %>
       <!-- Login link (when logged out) -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+
+      <!-- Empty links for homepage -->
+      <%= link_to "Features", root_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Pricing", root_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Demo", root_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Try it for free!", root_path, class: "navbar-wagon-item navbar-wagon-trial-link" %>
+
     <% end %>
   </div>
 

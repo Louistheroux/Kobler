@@ -1,1 +1,57 @@
-// Specific CSS for your home-page
+// Headers with lines on the sides
+.content-header {
+  margin-top: 80px;
+  text-align: center;
+  overflow: hidden;
+  padding-bottom: 40px;
+
+  span {
+    position:relative;
+    display: inline-block;
+  }
+
+  span:before, span:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    border-bottom: 2px solid $granite;
+    width: 592px;
+    margin: 0 20px;
+  }
+
+  span:before{
+    right: 100%;
+  }
+
+  span:after{
+    left: 100%;
+  }
+}
+
+
+// Review section
+.review-avatar {
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  margin-right: 20px;
+}
+
+.review-grid {
+  display: grid;
+  padding: 0px 50px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 200px 200px;
+  grid-column-gap: 20px;
+}
+
+.review-item {
+  display: flex;
+  word-wrap: break-word;
+  font-size: 16px;
+}
+
+.review-name {
+  font-style: italic;
+  font-size: 14px;
+}
