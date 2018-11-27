@@ -25,7 +25,7 @@ function availabilityCalendar(){
       selectable: true,
       dayClick: function(selectionInfo) {
         console.log(selectionInfo)
-        let start_time = selectionInfo.i
+        let start_time = selectionInfo._i
         let end_time = selectionInfo._d
         fetch(`${KOBLER_BASE_URL}baseworkweek`, {
           method: "POST",
@@ -34,9 +34,15 @@ function availabilityCalendar(){
           },
           body: JSON.stringify( {start_time, end_time} )
         });
+        //location.reload()
       },
       eventClick: function(info){
-         console.log("halløj");
+        if (confirm("Are you sure you want to delete?")) {
+          fetch(`${KOBLER_BASE_URL}/api/v1/availabilities/${info.id}`, {
+            method: "DELETE"
+          });
+          location.reload()
+        }
       },
       eventDrop: function(info) {
         let start_time = info.start._d
