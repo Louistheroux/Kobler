@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get '/bookings', to: 'bookings#index'
   post '/bookings', to: 'api/v1/availabilities#create'
 
+  resources :personal_tours, only: [ :new, :create ]
+
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
       resources :availabilities, only: [ :index, :update ]
@@ -17,3 +19,4 @@ Rails.application.routes.draw do
     end
   end
 end
+

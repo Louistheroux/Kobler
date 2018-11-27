@@ -13,6 +13,20 @@
  }
 }
 
+.button-form {
+ background-color: $blue;
+ padding: 12px 20px;
+ text-decoration: none;
+ border-radius: 5px;
+ color: white;
+
+ &:hover {
+  color:white;
+  text-decoration: none;
+ }
+}
+
+
 .btn-navbar{
   color: white;
   letter-spacing: 0;
