@@ -24,7 +24,6 @@ function availabilityCalendar(){
       slotLabelFormat: "H:mm",
       selectable: true,
       dayClick: function(selectionInfo) {
-        console.log(selectionInfo)
         let start_time = selectionInfo._i
         let end_time = selectionInfo._d
         fetch(`${KOBLER_BASE_URL}baseworkweek`, {
@@ -34,7 +33,7 @@ function availabilityCalendar(){
           },
           body: JSON.stringify( {start_time, end_time} )
         });
-        //location.reload()
+        location.reload()
       },
       eventClick: function(info){
         if (confirm("Are you sure you want to delete?")) {

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get '/baseworkweek', to: 'availabilities#index'
   post '/baseworkweek', to: 'api/v1/availabilities#create'
   get '/bookings', to: 'bookings#index'
-  post '/bookings', to: 'api/v1/availabilities#create'
+  post '/bookings', to: 'api/v1/bookings#create'
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
