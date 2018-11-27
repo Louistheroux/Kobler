@@ -18,6 +18,15 @@ class Api::V1::BookingsController < Api::V1::BaseController
     end
   end
 
+  def destroy
+    booking = Booking.find(params[:id])
+    if booking.destroy
+      redirect_to bookings_path
+    else
+      render_error
+    end
+  end
+
   private
 
   def availability_params
