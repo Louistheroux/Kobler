@@ -1,18 +1,20 @@
 
 <div class="dashboard-grid">
     <div class="teacher-box">
-      <h2>My profile</h2>
+      <h3>My profile</h3>
       <br>
       <h4><%= current_user.full_name %></h4>
       <br>
       <%= cl_image_tag current_user.instructor.photo, class: "avatar" %>
+      <br>
+      <br>
+      <p id="description">Owner of Amager Trafikskole</p>
+      <p id="description">Formula 1 driver</p>
     </div>
 
     <div class="student-list">
       <h3>Number of students this week</h3>
         <h1><%= @booked_lessons %></h1>
-        <br>
-        <br>
         <br>
         <%= link_to "See bookings", bookings_path, class:"button-banner" %>
     </div>
@@ -20,5 +22,11 @@
     <div class="new-student-list">
        <h3>Available slots</h3>
       <h1><%= @unbooked_lessons.count %></h1>
+    </div>
+
+    <div class="extra-field">
+      <h3>Earned money this week</h3>
+      <br>
+      <h1 id="money"><%= @booked_lessons * 500 %> dkk</h1>
     </div>
 </div>

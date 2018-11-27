@@ -8,7 +8,7 @@
 }
 
   .teacher-box {
-    height: 100%;
+    height: 94%;
     grid-row: 1 / span 3;
     grid-column: 1 / span 1;
     text-align: center;
@@ -17,17 +17,16 @@
   }
 
   .student-list {
-
     grid-row: 1 / span 1;
     grid-column: 2 / span 1;
     margin: 20px;
     text-align: center;
+    padding-bottom: 30px;
     box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.10);
 
   }
 
   .new-student-list {
-
     grid-row: 1 / span 1;
     grid-column: 3 / span 1;
     margin: 20px;
@@ -36,8 +35,25 @@
   }
 
   .avatar {
-    width: 250px;
+    width: 180px;
     border-radius: 50%;
     box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  }
+
+  .extra-field {
+    grid-row: 2 / span 2;
+    grid-column: 2 / span 2;
+    box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.10);
+    margin: 20px;
+    text-align: center;
+    height: 300px;
+  }
+
+  #money {
+    color: $green;
+  }
+
+  #description {
+    opacity: 0.6;
   }
 
