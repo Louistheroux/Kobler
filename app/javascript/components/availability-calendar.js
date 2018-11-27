@@ -35,7 +35,7 @@ function availabilityCalendar(){
           },
           body: JSON.stringify( {start_time, end_time} )
         });
-        //location.reload()
+        location.reload()
       },
       eventClick: function(info){
         if (confirm("Are you sure you want to delete?")) {
