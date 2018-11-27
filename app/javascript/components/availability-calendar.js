@@ -34,10 +34,10 @@ function availabilityCalendar(){
           },
           body: JSON.stringify( {start_time, end_time} )
         });
-        location.reload()
+        //location.reload()
       },
       eventClick: function(info){
-        if (confirm("press a button")) {
+        if (confirm("Are you sure you want to delete?")) {
           fetch(`${KOBLER_BASE_URL}/api/v1/availabilities/${info.id}`, {
             method: "DELETE"
           });
