@@ -1,36 +1,32 @@
 
 <div class="dashboard-grid">
     <div class="teacher-box">
-      <h1>My profile</h1>
-      <h4>Hamilton</h4>
-
-      <img class="img" src="https://www.amore.ng/wp-content/uploads/2017/12/Lewis-Hamilton-Formula-1.jpg" alt="hamilton">
-
+      <h3>My profile</h3>
+      <br>
+      <h4><%= current_user.full_name %></h4>
+      <br>
+      <%= cl_image_tag current_user.instructor.photo, class: "avatar" %>
+      <br>
+      <br>
+      <p id="description">Owner of Amager Trafikskole</p>
+      <p id="description">Formula 1 driver</p>
     </div>
 
     <div class="student-list">
-      <h3>List of the students</h3>
-        <ul>
-          <li>student 1</li>
-          <li>student 2</li>
-          <li>student 3</li>
-          <li>student 4</li>
-          <li>student 5</li>
-          <li>student 6</li>
-
-        </ul>
-
+      <h3>Number of students this week</h3>
+        <h1><%= @booked_lessons %></h1>
+        <br>
+        <%= link_to "See bookings", bookings_path, class:"button-banner" %>
     </div>
 
     <div class="new-student-list">
-       <h3>List of new/pending students</h3>
-       <ul>
-          <li>student 1</li>
-          <li>student 2</li>
-          <li>student 3</li>
-        </ul>
-
+       <h3>Available slots</h3>
+      <h1><%= @unbooked_lessons.count %></h1>
     </div>
 
-
+    <div class="extra-field">
+      <h3>Earned money this week</h3>
+      <br>
+      <h1 id="money"><%= @booked_lessons * 500 %> dkk</h1>
+    </div>
 </div>
