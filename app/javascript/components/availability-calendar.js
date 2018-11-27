@@ -9,11 +9,12 @@ function availabilityCalendar(){
       //   // change the border color just for fun
       //   info.el.style.borderColor = 'red';
       // },
-      eventColor: '#808281',
+      eventColor: '#D2D2D2',
       eventStartEditable: true,
       eventTextColor: "#222222",
       eventOverlap: false,
       defaultView: 'agendaWeek',
+      nowIndicator: false,
       locale: "en-gb",
       minTime: "08:00:00",
       maxTime: "21:00:00",
@@ -36,7 +37,8 @@ function availabilityCalendar(){
         });
       },
       eventClick: function(info){
-         console.log("halløj");
+         console.log();
+
       },
       eventDrop: function(info) {
         let start_time = info.start._d

@@ -46,6 +46,8 @@ class Instructor < ApplicationRecord
     random_bookings = self.bookings.shuffle
     random_bookings[0..bookings.size / 2].each do |booking|
       booking.student = Student.all.sample
+      booking.pick_up_point = Location.all.sample
+      booking.drop_off_point = Location.all.sample
       booking.save
     end
   end

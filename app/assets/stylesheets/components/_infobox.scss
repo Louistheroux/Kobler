@@ -1,0 +1,53 @@
+.infobox {
+  padding: 20px;
+
+.title_infobox {
+    font-size: 20px;
+    text-align: center;
+    span {
+    position:relative;
+    display: inline-block;
+  }
+
+  span:before, span:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    border-bottom: 2px solid $granite;
+    width: 53px;
+    margin: 0 20px;
+  }
+
+  span:before{
+    right: 100%;
+  }
+
+  span:after{
+    left: 100%;
+  }
+
+  }
+  .fas {
+    color: #9FA1A0;
+    padding-right: 10px;
+  }
+
+  .button_container {
+    display: flex;
+    justify-content: center;
+    .button-delete {
+     background-color: #EC544D;
+     padding: 12px 20px;
+     text-decoration: none;
+     border-radius: 5px;
+     color: white;
+     margin: 20px;
+
+      &:hover {
+        color: white;
+        text-decoration: none;
+        background: #B93D34;
+      }
+    }
+  }
+}
