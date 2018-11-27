@@ -32,7 +32,7 @@ class Booking < ApplicationRecord
     if self.student
      "#65D851"
     else
-      "#808281"
+      "#D2D2D2"
     end
   end
 end

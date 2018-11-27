@@ -18,6 +18,27 @@ class Api::V1::BookingsController < Api::V1::BaseController
     end
   end
 
+  def create
+    @booking = Booking.new
+    @booking.start_time = DateTime.parse(params[:end_time])
+    end_time =  @booking.start_time.change(hour: @booking.start_time.hour + 1)
+    @booking.end_time = end_time
+    @booking.instructor = current_user.instructor
+    @booking.save
+    respond_to do |format|
+      format.html { redirect_to baseworkweek_path }
+    end
+  end
+
+  def destroy
+    booking = Booking.find(params[:id])
+    if booking.destroy
+      redirect_to bookings_path
+    else
+      render_error
+    end
+  end
+
   private
 
   def availability_params
