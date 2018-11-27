@@ -1,0 +1,5 @@
+<% if current_user && current_user.instructor %>
+  <%= render 'shared/instructor_navbar' %>
+<% else %>
+  <%= render 'shared/student_navbar' %>
+<% end %>

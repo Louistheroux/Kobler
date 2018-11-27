@@ -200,7 +200,7 @@ instructor_2 = Instructor.create!(
   school: school_1
   )
 
-instructor_2.remote_photo_url = "https://www.amore.ng/wp-content/uploads/2017/12/Lewis-Hamilton-Formula-1.jpg"
+instructor_2.remote_photo_url = "https://specials-images.forbesimg.com/imageserve/5b1559054bbe6f74868b8385/416x416.jpg?background=000000&cropX1=1114&cropX2=3921&cropY1=307&cropY2=3112"
 instructor_2.save!
 
 

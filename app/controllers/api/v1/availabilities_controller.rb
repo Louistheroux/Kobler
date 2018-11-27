@@ -1,3 +1,5 @@
+require 'pry-byebug'
+
 class Api::V1::AvailabilitiesController < Api::V1::BaseController
   acts_as_token_authentication_handler_for User, except: [:homepage]
   #before_action :set_availability
@@ -7,15 +9,17 @@ class Api::V1::AvailabilitiesController < Api::V1::BaseController
     @availabilities = current_user.instructor.availabilities
   end
 
-  # def create
-  #   # binding.pry
-  #   # @availability = Availability.new(availability_params)
-  #   # @availability.instructor = current_user.instructor
-  #   # @availability.save
-  #   respond_to do |format|
-  #     format.html { redirect_to baseworkweek_path }
-  #   end
-  # end
+  def create
+    @availability = Availability.new
+    @availability.start_time = DateTime.parse(params[:end_time])
+    end_time =  @availability.start_time.change(hour: @availability.start_time.hour + 1)
+    @availability.end_time = end_time
+    @availability.instructor = current_user.instructor
+    @availability.save
+    respond_to do |format|
+      format.html { redirect_to baseworkweek_path }
+    end
+  end
 
   def update
     @availability = Availability.find(params[:id])
@@ -28,13 +32,10 @@ class Api::V1::AvailabilitiesController < Api::V1::BaseController
     end
   end
 
-  # def destroy
-  #   @availability = Availability.find(params[:id])
-  #   if @availability.destroy
-  #     render :index
-  #   else
-  #     render_error
-  # end
+  def destroy
+    @availability = Availability.find(params[:id])
+    @availability.destroy
+  end
 
   private
 
