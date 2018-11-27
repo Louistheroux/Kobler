@@ -25,7 +25,6 @@ function availabilityCalendar(){
       slotLabelFormat: "H:mm",
       selectable: true,
       dayClick: function(selectionInfo) {
-        console.log(selectionInfo)
         let start_time = selectionInfo._i
         let end_time = selectionInfo._d
         fetch(`${KOBLER_BASE_URL}baseworkweek`, {
