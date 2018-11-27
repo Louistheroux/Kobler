@@ -9,21 +9,37 @@
     padding-bottom: 10px;
   }
 
-  #last-header {
-    padding-bottom: 155px;
-  }
 
   #first-header {
-    padding-top: 125px;
+    padding-top: 50px;
+    padding-bottom: 74px;
   }
 
   align-items: center;
   justify-content: center;
 
 }
+<<<<<<< HEAD
+
+.btn {
+  margin: 30px;
+  background-color: $blue;
+}
+
+// .banner-home h1 {
+//   margin: 10px;
+//   padding-top: 250px;
+//   opacity: 1 !important;
+// }
+=======
 .banner-home h1 {
   margin: 10px;
   padding-top: 250px;
   opacity: 1 !important;
 }
+>>>>>>> accadc21f790d82b15d32a4a8961ebf01b5da258
 
+#mac-for_background {
+  height: 300px;
+  margin-top: 40px;
+}

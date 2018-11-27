@@ -55,3 +55,33 @@
   font-style: italic;
   font-size: 14px;
 }
+
+
+// Register section
+.register-container {
+  h2 {
+    padding-bottom: 5px;
+  }
+
+  p {
+    margin-bottom: 40px;
+  }
+}
+
+.form-personal-tour {
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+  border-radius: 5px;
+
+  input {
+    height: 60px;
+  }
+}
+
+#form-button-home {
+  margin-top: 20px;
+}
+
+
