@@ -8,7 +8,7 @@ class Api::V1::BookingsController < Api::V1::BaseController
   end
 
   def update
-    @booking = Availability.find(params[:id])
+    @booking = Booking.find(params[:id])
     @booking.start_time = DateTime.parse(params[:start_time])
     @booking.end_time = DateTime.parse(params[:end_time])
     if @booking.save
