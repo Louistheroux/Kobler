@@ -12,3 +12,5 @@ import { monthlyCalendar } from '../components/monthly-calendar.js';
 monthlyCalendar()
 
 import swal from 'sweetalert';
+
+import numAnim from '../components/countUp.js'
