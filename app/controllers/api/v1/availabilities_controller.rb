@@ -12,7 +12,7 @@ class Api::V1::AvailabilitiesController < Api::V1::BaseController
   def create
     @availability = Availability.new
     @availability.start_time = DateTime.parse(params[:end_time])
-    end_time =  @availability.start_time.change(hour: @availability.start_time.hour + 1)
+    end_time = @availability.start_time.change(hour: @availability.start_time.hour + 1, min: @availability.start_time.min + 30)
     @availability.end_time = end_time
     @availability.instructor = current_user.instructor
     @availability.save

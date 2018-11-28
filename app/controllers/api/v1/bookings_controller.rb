@@ -21,7 +21,7 @@ class Api::V1::BookingsController < Api::V1::BaseController
   def create
     @booking = Booking.new
     @booking.start_time = DateTime.parse(params[:end_time])
-    end_time =  @booking.start_time.change(hour: @booking.start_time.hour + 1)
+    end_time =  @booking.start_time.change(hour: @booking.start_time.hour + 1, min: @booking.start_time.min + 30)
     @booking.end_time = end_time
     @booking.instructor = current_user.instructor
     @booking.save
