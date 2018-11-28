@@ -35,6 +35,8 @@ function bookingsCalendar(){
     var calendar = new Calendar(calendarEl, {
       allDaySlot: false,
       eventTextColor: '#222222',
+      eventOverlap: false,
+      eventStartEditable: true,
       //header: false,
       defaultView: 'agendaWeek',
       minTime: "08:00:00",
@@ -55,7 +57,19 @@ function bookingsCalendar(){
            body: JSON.stringify( {start_time, end_time} )
          }); // Fetch closing
          location.reload()
-       } //closing DayClick
+       }, //closing DayClick
+        eventDrop: function(info) {
+        let start_time = info.start._d
+        let end_time = info.end._d
+        let id = info.id
+        fetch(`${KOBLER_BASE_URL}/api/v1/bookings/${id}`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json"
+          }, //closing Fetch
+          body: JSON.stringify( {start_time, end_time} )
+        }); // Closing function
+      } // Closing eventDrop
     }); //closing Calendar
     calendar.render();
   });
