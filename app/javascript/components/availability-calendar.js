@@ -27,24 +27,37 @@ function availabilityCalendar(){
       dayClick: function(selectionInfo) {
         let start_time = selectionInfo._i
         let end_time = selectionInfo._d
-        if (confirm("Are you sure you want to create an availability?")){
-        fetch(`${KOBLER_BASE_URL}baseworkweek`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify( {start_time, end_time} )
-        });
-        location.reload()
-        }
-      },
+        swal({
+            title: "Do you want to create a new availability?",
+            buttons: ["Cancel", "Create"],
+
+            }).then(function(isConfirm) {
+              if (isConfirm) {
+                fetch(`${KOBLER_BASE_URL}baseworkweek`, {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json"
+                  },
+                  body: JSON.stringify( {start_time, end_time} )
+                });
+                location.reload()
+              }
+            })
+        },
       eventClick: function(info){
-        if (confirm("Are you sure you want to delete?")) {
+        swal({
+          title: "Are you sure you want to delete availability?",
+          buttons: ["Cancel","Delete"],
+          dangerMode: true
+
+        }).then(function(isConfirm) {
+          if (isConfirm) {
           fetch(`${KOBLER_BASE_URL}/api/v1/availabilities/${info.id}`, {
             method: "DELETE"
           });
           location.reload()
         }
+      })
       },
       eventDrop: function(info) {
         let start_time = info.start._d
@@ -63,3 +76,4 @@ function availabilityCalendar(){
   });
 }
 export { availabilityCalendar }
+
