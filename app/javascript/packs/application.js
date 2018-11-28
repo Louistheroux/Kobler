@@ -10,3 +10,5 @@ bookingsCalendar()
 // For the month calendar in the left corner of the bookings view
 import { monthlyCalendar } from '../components/monthly-calendar.js';
 monthlyCalendar()
+
+import swal from 'sweetalert';
