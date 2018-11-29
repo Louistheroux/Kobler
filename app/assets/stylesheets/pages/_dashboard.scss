@@ -70,9 +70,37 @@
     background-color: #F4F4F4;
     margin: 5px;
     padding: 3px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    p {
+      margin-bottom: 0px;
+      padding: 10px 0px;
+
+    }
+
+  }
+
+  #sudents-list i {
+    padding-right: 10px;
   }
 
  #money-dkk {
     color: $green;
   }
 
+  .student-name {
+    text-align: left;
+    width: 250px;
+  }
+
+  .student-phone-number {
+    text-align: left;
+    width: 250px;
+  }
+
+  .student-email{
+    text-align: left;
+    width: 250px;
+  }

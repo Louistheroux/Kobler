@@ -23,7 +23,7 @@ greg = User.create!(
   full_name: 'Valtteri Bottas',
   email: 'valtteri@gmail.com',
   password: '123123',
-  phone_number: '12312312',
+  phone_number: rand(10000000..90000000).to_s,
   address: 'Sundvænget 6, 2900 Hellerup'
   )
 
@@ -31,7 +31,7 @@ bjorn = User.create!(
   full_name: 'Sebastian Vettel',
   email: 'vettel@gmail.com',
   password: '123123',
-  phone_number: '12312312',
+  phone_number: rand(10000000..90000000).to_s,
   address: 'Hellebækgade 42, 1. th'
   )
 
@@ -39,7 +39,7 @@ kasper = User.create!(
   full_name: 'Kimi Raikkonen',
   email: 'raikkonen@gmail.com',
   password: '123123',
-  phone_number: '12312312',
+  phone_number: rand(10000000..90000000).to_s,
   address: 'Vævergade 7, 2200 København'
   )
 
@@ -47,7 +47,7 @@ louis = User.create!(
   full_name: 'Daniel Ricciardo',
   email: 'ricciardo@live.com',
   password: 'louis123',
-  phone_number: '12312312',
+  phone_number: rand(10000000..90000000).to_s,
   address: 'Refsnæsgade 46, 2200 København'
   )
 
@@ -55,7 +55,7 @@ makena = User.create!(
   full_name: 'Max Verstappen',
   email: 'verstappen@gmail.com',
   password: '123123',
-  phone_number: '12312312',
+  phone_number: rand(10000000..90000000).to_s,
   address: 'Nørrebrogade 34, 2200 København'
   )
 
@@ -63,7 +63,7 @@ jerrel = User.create!(
   full_name: 'Sergio Perez',
   email: 'perez@gmail.com',
   password: '123123',
-  phone_number: '12312312',
+  phone_number: rand(10000000..90000000).to_s,
   address: 'Inge Lehmanns Vej 7, 2100 København'
   )
 
@@ -71,7 +71,7 @@ janina = User.create!(
   full_name: 'Esteban Ocon',
   email: 'ocon@gmail.com',
   password: '123123',
-  phone_number: '12312312',
+  phone_number: rand(10000000..90000000).to_s,
   address: 'Slagelsesgade 12, 2100 København'
   )
 
@@ -79,7 +79,7 @@ irene = User.create!(
   full_name: 'Irene Smith',
   email: 'irene@gmail.com',
   password: '123123',
-  phone_number: '12312312',
+  phone_number: rand(10000000..90000000).to_s,
   address: 'Willemoesgade 11, 2100 København'
   )
 
@@ -87,7 +87,7 @@ henry = User.create!(
   full_name: 'Lance Stroll',
   email: 'stroll@gmail.com',
   password: '123123',
-  phone_number: '12312312',
+  phone_number: rand(10000000..90000000).to_s,
   address: 'Krausesvej 2, 2100 København'
   )
 
@@ -95,7 +95,7 @@ brian = User.create!(
   full_name: 'Sergey Sirotkin',
   email: 'sirotkin@gmail.com',
   password: '123123',
-  phone_number: '12312312',
+  phone_number: rand(10000000..90000000).to_s,
   address: 'Assensgade 5, 2100 København'
   )
 
@@ -103,7 +103,7 @@ beltran = User.create!(
   full_name: 'Nico Hulkenberg',
   email: 'hulkenberg@gmail.com',
   password: '123123',
-  phone_number: '12312312',
+  phone_number: rand(10000000..90000000).to_s,
   address: 'Helgesensgade 5, 2100 København'
   )
 
@@ -111,7 +111,7 @@ anna = User.create!(
   full_name: 'Carlos Sainz Jr',
   email: 'gasly@gmail.com',
   password: '123123',
-  phone_number: '12312312',
+  phone_number: rand(10000000..90000000).to_s,
   address: 'Fåborggade 2, 2100 København'
   )
 
@@ -120,7 +120,7 @@ schumacher = User.create!(
   full_name: 'Michael Schumacher',
   email: 'schumacher@hotmail.com',
   password: '123123',
-  phone_number: '12312312',
+  phone_number: rand(10000000..90000000).to_s,
   address: 'Norgesmindevej 6, 2900 Hellerup'
   )
 
@@ -128,7 +128,7 @@ hamilton = User.create!(
   full_name: 'Lewis Hamilton',
   email: 'hamilton@gmail.com',
   password: '123123',
-  phone_number: '12312312',
+  phone_number: rand(10000000..90000000).to_s,
   address: 'Frederikkevej 19, 2900 Hellerup'
   )
 

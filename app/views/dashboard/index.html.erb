@@ -33,13 +33,16 @@
     </div>
  </div>
     <div class="my-students">
-      <h3>MY STUDENTS</h3>
-      <p>Name Phone number </p>
+
       <div class="container">
+      <h3>MY STUDENTS</h3>
         <div class="row">
           <% @students.each do |stu|%>
-          <div id="sudents-list"> <%= "#{stu.user.full_name}
-                                       #{stu.user.phone_number} #{stu.user.email}" %></div>
+          <div id="sudents-list">
+            <div class="student-name"><i class="fas fa-user"></i><%= "#{stu.user.full_name}" %></div>
+            <div class="student-phone-number"><i class="fas fa-phone"></i><%= "#{stu.user.phone_number}" %></div>
+            <div class="student-email"><i class="fas fa-envelope"></i><%= "#{stu.user.email}" %></div>
+          </div>
           <% end %>
         </div>
       </div>
