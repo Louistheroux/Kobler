@@ -51,8 +51,10 @@ function bookingsCalendar(){
          let start_time = selectionInfo._i;
          let end_time = selectionInfo._d;
          swal({
-              title: "Do you want to create a new availability?",
+              title: "Create availability",
+              text: "Do you want to create a new availability here?",
               buttons: ["Cancel", "Create"],
+
 
               }).then(function(isConfirm) {
            if (isConfirm){
