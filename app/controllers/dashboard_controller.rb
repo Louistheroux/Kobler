@@ -7,5 +7,7 @@ class DashboardController < ApplicationController
                                                )
     @unbooked_lessons = @total_lessons_this_week.where(student_id: nil)
     @booked_lessons = @total_lessons_this_week.count - @unbooked_lessons.count
+    @students = current_user.instructor.bookings.map(&:student).compact.uniq
   end
+
 end
