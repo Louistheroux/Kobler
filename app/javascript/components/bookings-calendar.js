@@ -39,6 +39,8 @@ function bookingsCalendar(){
       eventStartEditable: true,
       //header: false,
       defaultView: 'agendaWeek',
+      // Column header tryout
+      columnHeaderFormat: 'ddd D',
       minTime: "08:00:00",
       maxTime: "21:00:00",
       height: "auto",
