@@ -5,8 +5,9 @@ function monthlyCalendar(){
     var calendarEl = document.getElementById('monthly-calendar'); // grab element reference
     var calendar = new Calendar(calendarEl, {
       defaultView: 'month',
-      heigh: 'auto',
-      locale: "en-gb"
+      columnHeaderFormat: 'dd',
+      locale: "en-gb",
+      header: { right: '' }
     });
     calendar.render();
   });

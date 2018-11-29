@@ -1,0 +1,17 @@
+
+#availabilities-calendar .fc-today {
+  background-color:inherit !important;
+}
+
+// Calendar header divs
+#availabilities-calendar > div > div > table > thead > tr > td > div > table > thead > tr > th.fc-day-header.fc-widget-header {
+  padding: 20px 0px;
+}
+
+.my-workweek-header {
+  padding-left: 55px;
+}
+
+.my-workweek-instructions {
+  padding-left: 55px;
+}

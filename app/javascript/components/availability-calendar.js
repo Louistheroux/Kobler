@@ -9,11 +9,12 @@ function availabilityCalendar(){
       //   // change the border color just for fun
       //   info.el.style.borderColor = 'red';
       // },
-      eventColor: '#808281',
+      eventColor: '#D2D2D2',
       eventStartEditable: true,
       eventTextColor: "#222222",
       eventOverlap: false,
       defaultView: 'agendaWeek',
+      nowIndicator: false,
       locale: "en-gb",
       minTime: "08:00:00",
       maxTime: "21:00:00",
@@ -24,19 +25,39 @@ function availabilityCalendar(){
       slotLabelFormat: "H:mm",
       selectable: true,
       dayClick: function(selectionInfo) {
-        console.log(selectionInfo)
-        let start_time = selectionInfo.i
+        let start_time = selectionInfo._i
         let end_time = selectionInfo._d
-        fetch(`${KOBLER_BASE_URL}baseworkweek`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify( {start_time, end_time} )
-        });
-      },
+        swal({
+            title: "Do you want to create a new availability?",
+            buttons: ["Cancel", "Create"],
+
+            }).then(function(isConfirm) {
+              if (isConfirm) {
+                fetch(`${KOBLER_BASE_URL}baseworkweek`, {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json"
+                  },
+                  body: JSON.stringify( {start_time, end_time} )
+                });
+                location.reload()
+              }
+            })
+        },
       eventClick: function(info){
-         console.log("halløj");
+        swal({
+          title: "Are you sure you want to delete availability?",
+          buttons: ["Cancel","Delete"],
+          dangerMode: true
+
+        }).then(function(isConfirm) {
+          if (isConfirm) {
+          fetch(`${KOBLER_BASE_URL}/api/v1/availabilities/${info.id}`, {
+            method: "DELETE"
+          });
+          location.reload()
+        }
+      })
       },
       eventDrop: function(info) {
         let start_time = info.start._d
@@ -55,3 +76,4 @@ function availabilityCalendar(){
   });
 }
 export { availabilityCalendar }
+

@@ -1,4 +1,3 @@
-require 'pry-byebug'
 class Instructor < ApplicationRecord
   belongs_to :user
   belongs_to :school
@@ -15,11 +14,14 @@ class Instructor < ApplicationRecord
   def generate_availabilities
     now = Time.now
     start_time = now.beginning_of_week
+    default_slots = time_slots
     5.times do
-      (8..18).step(1).each do |hour|
-        next if hour == 13
-        start_time = start_time.change(hour: hour)
-        end_time = start_time.change(hour: hour + 1)
+      default_slots.each do |time_slot|
+        start_slot = time_slot[:start]
+        next if start_slot[:hour] == 14
+        end_slot = time_slot[:end]
+        start_time = start_time.change(hour: start_slot[:hour], min: start_slot[:minutes])
+        end_time = start_time.change(hour: end_slot[:hour], min: end_slot[:minutes])
         Availability.create!(
           instructor: self,
           start_time: start_time,
@@ -47,6 +49,8 @@ class Instructor < ApplicationRecord
     random_bookings = self.bookings.shuffle
     random_bookings[0..bookings.size / 2].each do |booking|
       booking.student = Student.all.sample
+      booking.pick_up_point = Location.all.sample
+      booking.drop_off_point = Location.all.sample
       booking.save
     end
   end
@@ -57,5 +61,29 @@ class Instructor < ApplicationRecord
       avail.end_time = avail.end_time.change(day: avail.end_time.day + 7)
       avail.save
     end
+  end
+
+  def time_slots
+    hour = 9
+    minutes = 0
+    slots = []
+    while hour < 19
+      start_time_string = "#{hour}:#{minutes}"
+      slot_hash = convert_to_time(start_time_string)
+      slots << slot_hash
+      next_start_time = "#{slot_hash.dig(:end, :hour)}:#{slot_hash.dig(:end, :minutes)}".to_time + 900
+      hour = next_start_time.hour
+      minutes = next_start_time.min
+    end
+    return slots
+  end
+
+  def convert_to_time(time)
+    start_time_object = time.to_time
+    end_time_object = start_time_object + 5400
+    {
+      start: { hour: start_time_object.hour, minutes: start_time_object.min },
+      end: { hour: end_time_object.hour, minutes: end_time_object.min }
+    }
   end
 end
