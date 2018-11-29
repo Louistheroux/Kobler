@@ -20,56 +20,56 @@ puts "Creating users..."
 
 
 greg = User.create!(
-  full_name: 'Greg Stachowiak',
-  email: 'gregista88@gmail.com',
+  full_name: 'Valtteri Bottas',
+  email: 'valtteri@gmail.com',
   password: '123123',
   phone_number: '12312312',
   address: 'Sundvænget 6, 2900 Hellerup'
   )
 
 bjorn = User.create!(
-  full_name: 'Bjørn Brok',
-  email: 'bjorn@gmail.com',
+  full_name: 'Sebastian Vettel',
+  email: 'vettel@gmail.com',
   password: '123123',
   phone_number: '12312312',
   address: 'Hellebækgade 42, 1. th'
   )
 
 kasper = User.create!(
-  full_name: 'Kasper Weidick',
-  email: 'kasper@gmail.com',
+  full_name: 'Kimi Raikkonen',
+  email: 'raikkonen@gmail.com',
   password: '123123',
   phone_number: '12312312',
   address: 'Vævergade 7, 2200 København'
   )
 
 louis = User.create!(
-  full_name: 'Louis Theroux',
-  email: 'louistheroux@live.com',
+  full_name: 'Daniel Ricciardo',
+  email: 'ricciardo@live.com',
   password: 'louis123',
   phone_number: '12312312',
   address: 'Refsnæsgade 46, 2200 København'
   )
 
 makena = User.create!(
-  full_name: 'Makena Hawley',
-  email: 'makena@gmail.com',
+  full_name: 'Max Verstappen',
+  email: 'verstappen@gmail.com',
   password: '123123',
   phone_number: '12312312',
   address: 'Nørrebrogade 34, 2200 København'
   )
 
 jerrel = User.create!(
-  full_name: 'Jerrel Burney',
-  email: 'jerrel@gmail.com',
+  full_name: 'Sergio Perez',
+  email: 'perez@gmail.com',
   password: '123123',
   phone_number: '12312312',
   address: 'Inge Lehmanns Vej 7, 2100 København'
   )
 
 janina = User.create!(
-  full_name: 'Janina Kokkonen',
-  email: 'janina@gmail.com',
+  full_name: 'Esteban Ocon',
+  email: 'ocon@gmail.com',
   password: '123123',
   phone_number: '12312312',
   address: 'Slagelsesgade 12, 2100 København'
@@ -84,32 +84,32 @@ irene = User.create!(
   )
 
 henry = User.create!(
-  full_name: 'Henry Stenberg',
-  email: 'henry@gmail.com',
+  full_name: 'Lance Stroll',
+  email: 'stroll@gmail.com',
   password: '123123',
   phone_number: '12312312',
   address: 'Krausesvej 2, 2100 København'
   )
 
 brian = User.create!(
-  full_name: 'Brian Welch',
-  email: 'brian@gmail.com',
+  full_name: 'Sergey Sirotkin',
+  email: 'sirotkin@gmail.com',
   password: '123123',
   phone_number: '12312312',
   address: 'Assensgade 5, 2100 København'
   )
 
 beltran = User.create!(
-  full_name: 'Beltran Nowack',
-  email: 'beltran@gmail.com',
+  full_name: 'Nico Hulkenberg',
+  email: 'hulkenberg@gmail.com',
   password: '123123',
   phone_number: '12312312',
   address: 'Helgesensgade 5, 2100 København'
   )
 
 anna = User.create!(
-  full_name: 'Anna Litfin',
-  email: 'anna@gmail.com',
+  full_name: 'Carlos Sainz Jr',
+  email: 'gasly@gmail.com',
   password: '123123',
   phone_number: '12312312',
   address: 'Fåborggade 2, 2100 København'
@@ -190,7 +190,7 @@ instructor_1 = Instructor.create!(
   school: school_1
   )
 
-instructor_1.remote_photo_url = "https://www.thestar.com/content/dam/thestar/sports/2014/06/16/michael_schumacher_out_of_a_coma_released_from_hospital/michael_schumacher.jpg"
+instructor_1.remote_photo_url = "https://pm1.narvii.com/6834/b89aa9a35ae20e6196087fe7c0e59ebb95befdcfv2_128.jpg"
 instructor_1.save!
 
 
