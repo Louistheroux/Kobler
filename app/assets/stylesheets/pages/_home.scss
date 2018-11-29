@@ -14,7 +14,7 @@
     content: '';
     position: absolute;
     top: 50%;
-    border-bottom: 2px solid $granite;
+    border-bottom: 1px solid $granite;
     width: 592px;
     margin: 0 20px;
   }
@@ -28,6 +28,15 @@
   }
 }
 
+.content-header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-header-container {
+  width: 1200px;
+}
 
 // Review section
 .review-avatar {
