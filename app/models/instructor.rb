@@ -42,6 +42,7 @@ class Instructor < ApplicationRecord
         end_time: booking.end_time
         )
     end
+      generate_students_for_bookings
   end
 
   #GENERATING DUMMI BOOKINGS FOR DEMO PURPOSES

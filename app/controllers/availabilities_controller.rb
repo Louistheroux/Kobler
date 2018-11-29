@@ -5,9 +5,11 @@ class AvailabilitiesController < ApplicationController
 
   def update
     @availability.find(availabilty_params)
+    #generate_bookings
   end
 
   def create
+   #generate_bookings
   end
 
   def new
