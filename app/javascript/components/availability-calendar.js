@@ -28,8 +28,10 @@ function availabilityCalendar(){
         let start_time = selectionInfo._i
         let end_time = selectionInfo._d
         swal({
-            title: "Do you want to create a new availability?",
-            buttons: ["Cancel", "Create"],
+            title: "Create availability",
+              text: "Do you want to create a new availability here?",
+              buttons: ["Cancel", "Create"],
+
 
             }).then(function(isConfirm) {
               if (isConfirm) {
@@ -46,7 +48,8 @@ function availabilityCalendar(){
         },
       eventClick: function(info){
         swal({
-          title: "Are you sure you want to delete availability?",
+          title: "Delete availability?",
+          text: "This will delete the availability from your workweek.",
           buttons: ["Cancel","Delete"],
           dangerMode: true
 
