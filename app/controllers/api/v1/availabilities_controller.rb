@@ -1,5 +1,3 @@
-require 'pry-byebug'
-
 class Api::V1::AvailabilitiesController < Api::V1::BaseController
   acts_as_token_authentication_handler_for User, except: [:homepage]
   #before_action :set_availability
