@@ -56,7 +56,7 @@ class Instructor < ApplicationRecord
   end
 
   def next_week_availabilities
-    availabilities.each do |avail|
+    avail.each do |avail|
       avail.start_time = avail.start_time.change(day: avail.start_time.day + 7)
       avail.end_time = avail.end_time.change(day: avail.end_time.day + 7)
       avail.save
