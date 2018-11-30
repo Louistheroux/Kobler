@@ -42,7 +42,7 @@ function availabilityCalendar(){
                   },
                   body: JSON.stringify( {start_time, end_time} )
                 });
-                // location.reload()
+                location.reload()
               }
             })
         },
